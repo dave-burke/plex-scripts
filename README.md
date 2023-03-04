@@ -1,15 +1,16 @@
 # Plex Scripts
 
-## copy-playlist.py
+## playlist-cat.py
+
+This script can be used in a bash script to do any number of things with the files in a playlist, such as copying them to another directory.
 
 ```
-usage: copy-playlist.py [-h] [-u URL] [-t TOKEN] playlist_title target_dir
+usage: playlist-cat.py [-h] [-u URL] [-t TOKEN] playlist_title
 
-Copy files from a Plex playlist to a specified target directory
+Print files from a Plex playlist to stdout
 
 positional arguments:
   playlist_title          title of the playlist to copy
-  target_dir              directory to copy the files to
 
 options:
   -h, --help              show this help message and exit
