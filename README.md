@@ -17,3 +17,17 @@ options:
   -u URL, --url URL       URL for the Plex server (default: http://localhost:32400)
   -t TOKEN, --token TOKEN Authentication token
 ```
+
+### Example
+
+Assuming that your media is stored in `/mnt/plex`, this will copy your playlist files to a USB mounted at `/mnt/usb`.
+
+```bash
+python playlist-cat.py -u "http://localhost:32400" -t "xxx" "My Playlist" | while read file; do
+  relative_path="${file#/mnt/plex/}"
+  dest_path="/mnt/usb/${relative_path}"
+  new_dir="$(dirname ${dest_path})"
+  mkdir -p "${new_dir}"
+  cp -v "${file}" "${dest_path}"
+```
+
