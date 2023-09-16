@@ -41,5 +41,6 @@ python playlist-cat.py -u "http://localhost:32400" -t "xxx" "My Playlist" | whil
   new_dir="$(dirname ${dest_path})"
   mkdir -p "${new_dir}"
   cp -v "${file}" "${dest_path}"
+done
 ```
 
