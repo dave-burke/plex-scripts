@@ -1,5 +1,17 @@
 # Plex Scripts
 
+```sh
+# Set up virtual environment (1-time after cloning)
+python -m venv ./
+
+# If pip goes missing
+python -m ensurepip --default-pip
+
+# Updates / dependency changes
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
 ## playlist-cat.py
 
 This script can be used in a bash script to do any number of things with the files in a playlist, such as copying them to another directory.
